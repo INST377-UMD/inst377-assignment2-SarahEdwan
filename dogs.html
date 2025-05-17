@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dogs</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body onload="dogPics()">
+    <script src="function.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <header>
+      <h1>INST377 - Activities</h1>
+      <nav class="menu">
+        <a href="home.html">Home</a>
+        <a href="stocks.html">Stocks</a>
+        <a href="dogs.html" class="active">Dogs</a>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="dog-title">Doggos! </h2>
+
+      <div id="dogSlider" data-simple-slider style="width: 250px; height: 250px"></div>
+
+      <div id="buttons" class="dog-buttons"></div>
+
+      <div id="info"></div>
+
+      <section class="information">
+        <h3>Voice Commands</h3>
+        <p>Make sure your mic is enabled to enjoy these features:</p>
+        <ul>
+          <li><strong>Load Dog Breed:</strong> “Load Dog Breed (breed name)”</li>
+          <li><strong>Navigation:</strong> “Navigate to (page name)”</li>
+          <li><strong>Change Color:</strong> “Change the color to (color)”</li>
+          <li><strong>Say Hello:</strong> “Hello”</li>
+        </ul>
+
+        <div class="buttons">
+          <button class="button-64" onclick="voiceDogs()">
+            <span class="text">Turn on Listening</span>
+          </button>
+          <button class="button-64" onclick="voiceOff()">
+            <span class="text">Turn Off Listening</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+  </body>
+</html>
