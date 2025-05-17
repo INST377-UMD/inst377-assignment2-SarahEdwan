@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Quick centering for all main content */
+      body {
+        font-family: "Quicksand", sans-serif;
+        background-color: #fffafc;
+        margin: 0;
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        color: #5a5a5a;
+      }
+
+      .menu nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 1rem 0 2rem 0;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #d67ab1;
+        font-weight: 600;
+        font-size: 1.1rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 8px;
+      }
+
+      nav a.active,
+      nav a:hover {
+        background-color: #ffb3d9;
+        color: white;
+      }
+
+      h1, h2 {
+        margin-bottom: 1rem;
+        color: #d67ab1;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+
+      .button-64 {
+        background-color: #ffb3d9;
+        border: none;
+        border-radius: 12px;
+        padding: 1rem 2rem;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(255, 179, 217, 0.5);
+        transition: background-color 0.3s ease;
+      }
+
+      .button-64:hover {
+        background-color: #ff94c2;
+      }
+
+      .center {
+        max-width: 700px;
+        width: 100%;
+        margin: 1.5rem auto;
+      }
+
+      .information ul {
+        list-style: inside disc;
+        margin-bottom: 1rem;
+        color: #7d4f75;
+      }
+
+      .information ul ul {
+        list-style-type: circle;
+        color: #a16a9e;
+      }
+
+      #quote, #author {
+        font-style: italic;
+        color: #a16a9e;
+        margin: 0.25rem 0;
+      }
+    </style>
+  </head>
+  <body onload="loadQuote()">
+    <script src="function.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+    <h1>INST377 - Activities</h1>
+
+    <div class="menu">
+      <nav>
+        <a href="home.html" class="active">Home</a>
+        <a href="stocks.html">Stocks</a>
+        <a href="dogs.html">Dogs</a>
+      </nav>
+    </div>
+
+    <h1>These are some different activities we can try!</h1>
+
+    <div class="buttons">
+      <button class="button-64" role="button" onclick="loadStocks()">
+        <span class="text">Stocks</span>
+      </button>
+      <button class="button-64" role="button" onclick="loadDogs()">
+        <span class="text">Dogs</span>
+      </button>
+    </div>
+
+    <div class="center">
+      <div class="load">
+        <div class="text">
+          <h2>Quote of the Page Load</h2>
+          <p id="quote"></p>
+          <p id="author"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="center information">
+      <div>
+        <h2>In this web page there are options to Navigate using Audio!</h2>
+        <p>Ensure your Mic is enabled to be able to use this feature</p>
+        <ul>
+          <li>Navigate to a Different Page
+            <ul>
+              <li>Say: <b>Navigate to the intended page</b></li>
+            </ul>
+          </li>
+          <li>Change the Page Color
+            <ul>
+              <li>Say: <b>Change the color to intended color</b></li>
+            </ul>
+          </li>
+          <li>Say Hello Back to you!
+            <ul>
+              <li>Say: <b>Hello</b></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="buttons">
+          <button class="button-64" role="button" onclick="voiceHome()">
+            <span class="text">Turn on Listening</span>
+          </button>
+          <button class="button-64" role="button" onclick="voiceOff()">
+            <span class="text">Turn Off Listening</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
